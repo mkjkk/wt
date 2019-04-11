@@ -1,0 +1,6 @@
+<html>
+<head><title>anchor tag</title></head>
+<body>
+<a href="www.google.com">click me</a>
+</body>
+</html>

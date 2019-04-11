@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+
+	<script type="text/javascript">
+		function changecolor(id)
+		{
+			id.bgColor="red";
+		}
+		function keyCodeAndVowel(e)
+		{
+			var pid=document.getElementById("pid");
+			pid.innerHTML=String.fromCharCode(e.keyCode);
+			
+			switch(e.keyCode)
+			{
+				case 97:
+				case 65:
+				case 101:
+				case 69:
+				case 105:
+				case 73:
+				case 111:
+				case 79:
+				case 117:
+				case 85:
+				pid2.innerHTML="Vowel pressed...";
+				break;
+				default:
+				pid2.innerHTML="";
+				break;
+			}
+		}
+	</script>
+ </HEAD>
+
+ <BODY onkeyup="changecolor(this)" onkeypress="keyCodeAndVowel(event)" >
+	<p id="pid"></p>
+	<p id="pid2"></p>
+ </BODY>
+</HTML>

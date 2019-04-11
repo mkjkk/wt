@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		function validate(form) {
+			var un=form.Un.value;
+			var pass=form.Pas.value;
+			var Fs1=/^@[A-Za-z]/;
+			var Fs2=/^_[A-Za-z]/;
+			var Fs3=/^[0-9]/;
+		
+			if(un.length==0){
+				alert("enter username");
+				return false;
+			}
+			if(pass.length==0){
+				alert("enter password");
+				return false;
+			}
+			if(Fs1.test(un)){
+				alert("invalid username");
+				return false;
+			}
+			if(Fs2.test(un)){
+				alert("invalid username");
+				return false;
+			}
+			if(Fs3.test(un)){
+				alert("invalid username");
+				return false;
+			}
+			if(pass.length<6||pass.length>12){
+				alert("6 to 12 only");
+				return false;
+			}
+			
+			return true;
+		}
+		</script>
+	</head>
+	<body>
+		<form onsubmit="return validate(this);">
+			Username:<input type="text" name="Un" size="10"><br/>
+			Password:<input type="password" name="Pas" size="10"><br/>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

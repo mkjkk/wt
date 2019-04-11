@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+var array = new Array(15,23,1,69,45,36,7,64,99,5);
+document.write("Array is "+ array);
+var arrayLength = array.length;
+var i;
+var j;
+var k;
+for(i=0;i<arrayLength;i++)
+{
+	for(j=i+1;j<arrayLength;j++)
+	{
+	  if(array[i]<array[j])
+	  {
+	            k=array[i];
+				array[i]=array[j];
+				array[j]=k;
+	  }
+    }
+}
+document.write("<br/>After bubble sort in desending order " + array);
+</script>
+</head>
+<body>
+</body>
+</html>

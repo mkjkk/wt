@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY>
+	<script type="text/javascript" language="javascript">
+		function mytest()
+		{
+			var u = document.getElementById("no").value;
+			var m = document.getElementById("mob").value;
+			var e = document.getElementById("email").value;
+			
+			var pat_u=/^[A-z]$/;
+			var pat_m=/^\d{10}$/;
+			var pat_e=/[A-z0-9._]+@[A-z0-9.-]+\.([A-z]{2,})/i;
+
+			if(!pat_u.test(u))
+			{
+				alert("Invalid username...");
+			}
+			else if(!pat_m.test(m))
+			{
+				alert("Invalid mobile number...");
+			}
+			else if (!pat_e.test(e))
+			{
+				alert("Invalid email ID");
+			}
+		}		
+	</script>
+	<form action="">
+		Usrname:<input type="text" id="no"/>
+		Mob:<input type="text" id="mob"/>
+		Email: <input type="text" id="email"/>
+		<input type="button" onclick="mytest()" value="Submit"/>
+	</form>
+ </BODY>
+</HTML>

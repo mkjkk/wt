@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY>
+	<script type="text/javascript">
+		var d1 = new Date();
+		var d2 = new Date();
+		
+		
+	//187
+		d2.setFullYear(d1.getYear());
+		d2.setMonth(8);
+		d2.setDate(15);
+		
+		var m1 = d1.getMonth();
+		var m2 = d2.getMonth();
+		
+		
+		var y=d1.getFullYear();
+		
+		var arr;
+		if(y%4==0 && y%100!=0)
+		{
+			arr = [31,29,31,30,31,30,31,31,30,31,30,31];
+		}
+		else if(y%400==0)
+		{
+			arr = [31,29,31,30,31,30,31,31,30,31,30,31];
+		}
+		else
+		{
+			arr = [31,28,31,30,31,30,31,31,30,31,30,31];
+		}
+		var i,count=arr[m1]-d1.getDate();
+		
+		if(m2<m1)
+		{
+			alert("Your date is gone..");
+		}
+		else if(m2>m1)
+		{
+			for(i=m1+1;i<m2;i++)
+			{
+				count+=arr[i];
+			}
+			count+=d2.getDate();			
+			alert("Days="+count);
+		}
+		else
+		{
+			var date1=d1.getDate();
+			var date2=d2.getDate();
+			if(date2<date1)
+			{
+				alert("Your date is gone..");
+			}
+			else
+			{
+				count=date2-date1;
+				alert("Days="+count);
+			}
+		}		
+	</script>
+ </BODY>
+</HTML>

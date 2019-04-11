@@ -1,0 +1,6 @@
+<html>
+<head><title>Image tag</title></head>
+<body>
+<img src="hi.png" alt="image">
+</body>
+</html>

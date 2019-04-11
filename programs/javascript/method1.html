@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Hello</title>
+</head>
+<body>
+<form name="form1">
+<input type="text" name="my" onfocus="this.blur;"/>
+<input type="button" onclick="fun()" value="click me"/>
+</form>
+<script type="text/javascript">
+function fun()
+{
+var d=document.form1.my;
+d.value="hi";
+
+}
+</script>
+</body>
+</html>

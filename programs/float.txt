@@ -1,0 +1,12 @@
+<html>
+<head>
+<style type="text/css">
+img.floatLeft{float:left;margin:4px;}
+img.floatRight{float:right; margin:4px;}
+</style>
+</head>
+<body>
+<img src="hi.png" class="floatLeft"><p>The images are contained with...</p>
+<img src="hi.png" class="floatRight"><p>This second paragraph has an...</p>
+</body>
+</html>

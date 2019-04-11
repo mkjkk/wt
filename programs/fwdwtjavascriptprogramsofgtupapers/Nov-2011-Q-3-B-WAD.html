@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY>
+	<script type="text/javascript" language="javascript">
+		function test()
+		{
+			var n = document.getElementById("pass").value;
+			
+			var r3=/\W+/;
+			if(n.length>=8)
+			{
+				if(!r3.test(n))
+				{
+					alert("There must be some special char");
+				}
+			}
+			else
+			{
+				alert("Password length must be >=8..");
+			}
+		}
+		
+	</script>
+	<p id="p1"></p>
+	<button onclick="myfun()">clickme</button>
+	<form action="">
+		Password:<input type="password" id="pass"/>
+		<input type="button" onclick="test()" value="Submit"/>
+	</form>
+ </BODY>
+</HTML>

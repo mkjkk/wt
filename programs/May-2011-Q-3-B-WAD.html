@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+
+ <BODY>
+	<script type="text/javascript" language="javascript">
+		function test()
+		{
+			var u = document.getElementById("uname").value;
+			var p = document.getElementById("pass").value;
+			var regex =/^\@|^\_|^[0-9]/;
+			if(u=="" || p=="")
+			{
+				alert("Username or password must not be blank...");
+			}
+			else if(p.length<6 || p.length>12)
+			{
+				alert("Password must be between 6 to 12 letters..");
+			}
+			/*else if(p.length<6 || p.length>12)
+			{
+				alert("Password must be of 6-12 chars...");
+			}*/
+			else if(regex.test(u))
+			{
+				alert("Username should not start with _,@ or any number...");
+			}
+		}
+	</script>
+	<form>
+		Username:<input type="text" id="uname"/>
+		Password:<input type="password" id="pass"/>
+		<input type="button" onclick="test()" value="Submit"/>
+	</form>
+ </BODY>
+</HTML>

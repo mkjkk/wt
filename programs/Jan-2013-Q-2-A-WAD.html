@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+	<script type="text/javascript">
+		function count()
+		{
+			var arr = document.forms['myform'];
+			var pid=document.getElementById("pid");
+			pid.innerHTML="No. of elements="+arr.length;
+		}
+		function fun(e)
+		{
+			var d = document.getElementById("d1");
+			d.innerHTML="Hello world..";
+			alert(e.button);
+		}
+	</script>
+ </HEAD>
+
+ <BODY>
+	<form name="myform">
+		<input type="text" name="t1"/>
+		<input type="text" name="t2"/>
+		<input type="checkbox" name="c1"/>
+		<input type="password" name="p1"/>
+		<input type="text" name="t3"/>
+		<input type="button" name="b1" onclick="count()" value="Click Me"/>
+	</form>
+	<div onmousedown="fun(event)" style="border:2px solid red;width:50%;height:50%" id="d1">
+	</div>
+	<p id="pid"></p>
+ </BODY>
+</HTML>

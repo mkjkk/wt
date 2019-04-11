@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+	<script type="text/javascript">
+		function fun(id)
+		{
+			var bid = document.getElementById("bid");
+			
+			if(id.value=="red")
+			{
+				bid.bgColor="red";
+			}
+			else
+			{
+				bid.bgColor="green";
+			}
+		}
+		function showtime()
+		{
+			var d = new Date();
+			var pid = document.getElementById("time");
+			pid.innerHTML=d;
+		}
+	</script>
+ </HEAD>
+
+ <BODY id="bid">
+	<input type="button" value="red" onclick="fun(this)"/>
+	<input type="button" value="green" onclick="fun(this)"/>
+	<input type="button" value="Find time" onclick="showtime()"/>
+
+	<p id="time"></p>
+
+	<h1 onmouseover="this.style.color='yellow'" onmouseout="this.style.color='black'">This is heading...</h1>
+ </BODY>
+</HTML>
